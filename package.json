@@ -8,7 +8,9 @@
     "build-prod": "node build.js",
     "compile": "node build.js",
     "start": "http-server -c-1 .",
-    "selenium": "cd webdriver-ts && npm run selenium && npm run results"
+    "selenium": "cd webdriver-ts && npm run selenium && npm run results",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "benchmark",
@@ -30,6 +32,8 @@
     "command-exists": "^1.0.2",
     "fs-extra": "^0.30.0",
     "http-server": "^0.9.0",
-    "lodash": "^4.15.0"
-  }
+    "lodash": "^4.15.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
